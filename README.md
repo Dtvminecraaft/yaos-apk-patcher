@@ -4,7 +4,7 @@
 
 Авто-модерация Яндекс ТВ блокирует APK, которые запрашивают «опасные» разрешения (`REQUEST_INSTALL_PACKAGES`, `SYSTEM_ALERT_WINDOW` и другие). Этот патчер удаляет их из `AndroidManifest.xml`, пересобирает APK и подписывает заново.
 
-[![Последний релиз](https://img.shields.io/github/v/release/Dtvminecraaft/yaos-apk-patcher?label=последний%20релиз)](https://github.com/ВАШ_НИК/yaos-apk-patcher/releases/latest)
+[![Последний релиз](https://img.shields.io/github/v/release/Dtvminecraaft/yaos-apk-patcher?label=последний%20релиз)](https://github.com/Dtvminecraaft/yaos-apk-patcher/releases/latest)
 [![Лицензия](https://img.shields.io/github/license/Dtvminecraaft/yaos-apk-patcher)](LICENSE)
 
 ---
@@ -12,7 +12,7 @@
 ## Возможности
 
 - **Удаляет 8 разрешений**, блокирующих модерацию
-- **Windows** — готовый `.bat`-скрипт
+- **Windows** — готовый `.bat`-скрипт (`fixer.bat`)
 - **Автоустановка Java 17** — если её нет, скрипт скачает и поставит сам
 - **XML-парсер** вместо regex — не ломает манифест (подтверждено на сложных APK)
 - **Автоподпись** через [uber-apk-signer](https://github.com/patrickfav/uber-apk-signer)
@@ -31,10 +31,10 @@
 
 ## Установка
 
-1. Скачайте последний релиз со страницы [Releases](https://github.com/ВАШ_НИК/yaos-apk-patcher/releases/latest).
+1. Скачайте последний релиз со страницы [Releases](https://github.com/Dtvminecraaft/yaos-apk-patcher/releases/latest).
 2. Распакуйте архив в любую папку.
 3. Убедитесь, что рядом лежат:
-   - `patch_apk.bat`
+   - `fixer.bat`
    - `apktool.jar`
    - `uber-apk-signer.jar`
 
@@ -42,7 +42,7 @@
 
 ## Использование
 
-1. Перетащите APK-файл на `patch_apk.bat`.
+1. Перетащите APK-файл на `fixer.bat`.
 2. Дождитесь окончания (30–90 сек).
 3. Рядом появится файл `<имя_исходного>_patched.apk`.
 4. Загрузите его на [dialogs.yandex.ru](https://dialogs.yandex.ru/developer/quick-apps).
@@ -51,7 +51,7 @@
 ### Из командной строки
 
 ```bat
-patch_apk.bat "C:\path\to\app.apk"
+fixer.bat "C:\path\to\app.apk"
 ```
 
 ---
@@ -98,14 +98,15 @@ patch_apk.bat "C:\path\to\app.apk"
 
 ## Проверено на
 
-- **Red Shield VPN** — загружается на dialogs.yandex.ru, устанавливается и работает на **Яндекс Модуле**.
+- **Устройство:** Яндекс Модуль (YNDX-00251)
+- **Приложение:** Red Shield VPN — загружается на dialogs.yandex.ru, устанавливается и работает.
 
 ---
 
 ## FAQ
 
 **Приложение вылетает после патча.**
-Значит, одно из удалённых разрешений было критичным. Верните его обратно, отредактировав список `$forbidden` в скрипте.
+Значит, одно из удалённых разрешений было критичным. Верните его обратно, отредактировав список `$forbidden` в `fixer.bat`.
 
 **`Не удалось собрать APK / mismatched tag`.**
 Обновите `apktool.jar` до последней версии — [bitbucket.org/iBotPeaches/apktool](https://bitbucket.org/iBotPeaches/apktool/downloads/).
@@ -130,10 +131,18 @@ Set-ExecutionPolicy RemoteSigned
 ## Changelog
 
 ### v1.0.1
-- Первый релиз на Github
+- Первый релиз на GitHub
 - Удаление 8 разрешений
 - Автоустановка Java 17
 - XML-парсер вместо regex
+
+> Версия 1.0.0 была опубликована только на 4PDA.
+> 1.0.1 — первая версия на GitHub.
+
+### v1.0.0
+- Первая версия патчера (публикация на 4PDA)
+- Удаление 8 разрешений
+- Автоустановка Java 17
 
 ---
 
@@ -147,5 +156,5 @@ Set-ExecutionPolicy RemoteSigned
 
 - [iBotPeaches / Apktool](https://ibotpeaches.github.io/Apktool/)
 - [patrickfav / uber-apk-signer](https://github.com/patrickfav/uber-apk-signer)
-- Сообществу [4PDA]([https://4pda.to/forum/index.php?showtopic=1035767](https://4pda.to/forum/index.php?showtopic=1034162)) за инфу
-- Deepseek за помощь и код
+- Сообществу [4PDA](https://4pda.to/forum/index.php?showtopic=1034162) за информацию и тестирование — [обсуждение патчера](https://4pda.to/forum/index.php?showtopic=1034162&view=findpost&p=145275274)
+- DeepSeek за помощь и код
