@@ -129,8 +129,8 @@ Set-ExecutionPolicy RemoteSigned
 
 ## Changelog
 
-### v1.0
-- Первый релиз
+### v1.0.1
+- Первый релиз на Github
 - Удаление 8 разрешений
 - Автоустановка Java 17
 - XML-парсер вместо regex
