@@ -147,4 +147,5 @@ Set-ExecutionPolicy RemoteSigned
 
 - [iBotPeaches / Apktool](https://ibotpeaches.github.io/Apktool/)
 - [patrickfav / uber-apk-signer](https://github.com/patrickfav/uber-apk-signer)
-- Сообществу [4PDA](https://4pda.to/forum/index.php?showtopic=1035767) за тестирование и обратную связь
+- Сообществу [4PDA]([https://4pda.to/forum/index.php?showtopic=1035767](https://4pda.to/forum/index.php?showtopic=1034162)) за инфу
+- Deepseek за помощь и код
