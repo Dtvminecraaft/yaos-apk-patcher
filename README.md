@@ -4,8 +4,8 @@
 
 Авто-модерация Яндекс ТВ блокирует APK, которые запрашивают «опасные» разрешения (`REQUEST_INSTALL_PACKAGES`, `SYSTEM_ALERT_WINDOW` и другие). Этот патчер удаляет их из `AndroidManifest.xml`, пересобирает APK и подписывает заново.
 
-[![Последний релиз](https://img.shields.io/github/v/release/ВАШ_НИК/yaos-apk-patcher?label=последний%20релиз)](https://github.com/ВАШ_НИК/yaos-apk-patcher/releases/latest)
-[![Лицензия](https://img.shields.io/github/license/ВАШ_НИК/yaos-apk-patcher)](LICENSE)
+[![Последний релиз](https://img.shields.io/github/v/release/Dtvminecraaft/yaos-apk-patcher?label=последний%20релиз)](https://github.com/ВАШ_НИК/yaos-apk-patcher/releases/latest)
+[![Лицензия](https://img.shields.io/github/license/Dtvminecraaft/yaos-apk-patcher)](LICENSE)
 
 ---
 
